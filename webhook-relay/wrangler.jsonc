@@ -1,0 +1,25 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "webhook-relay",
+  "main": "src/index.ts",
+  "compatibility_date": "2025-08-27",
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "WEBHOOK_RELAY",
+        "class_name": "WebhookRelay"
+      }
+    ]
+  },
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_sqlite_classes": [
+        "WebhookRelay"
+      ]
+    }
+  ],
+  "observability": {
+    "enabled": true
+  }
+}
